@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ShareRealmThroughQR"
+             xmlns:vm="clr-namespace:ShareRealmThroughQR.ViewModels"
+             x:Class="ShareRealmThroughQR.MainPage"
+             Title="Menu">
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout
+           VerticalOptions="Center" 
+           HorizontalOptions="Center">
+        <Button Text="Invite" Command="{Binding InviteCommand}"/>
+        <Button Text="Join" Command="{Binding JoinCommand}"/>
+    </StackLayout>
+</ContentPage>

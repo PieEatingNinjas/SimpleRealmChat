@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ZXing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             x:Class="ShareRealmThroughQR.InvitePage">
+    <Grid>
+        <ZXing:ZXingBarcodeImageView 
+                    x:Name="BarCodeView"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"
+                    HeightRequest="300"
+                    WidthRequest="300"
+                    Margin="10"
+                    BarcodeFormat="QR_CODE" />
+        <Button Text="Close" HorizontalOptions="Center" 
+                VerticalOptions="End" 
+                Margin="0, 0, 0, 10" 
+                Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>
