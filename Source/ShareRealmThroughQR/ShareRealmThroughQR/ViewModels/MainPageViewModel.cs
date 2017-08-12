@@ -28,8 +28,11 @@ namespace ShareRealmThroughQR.ViewModels
             //Login as User1
             await Login("User1", "pwd");
 
-            MyInvitation invite = await InvitationHelper.CreateInviteAsync(ApplicationConfig.REALM_URL);
+            //create Realm
+            var realmConfig = new SyncConfiguration(User.Current, new Uri(ApplicationConfig.REALM_URL));
+            var x = Realm.GetInstance(realmConfig);
 
+            MyInvitation invite = await InvitationHelper.CreateInviteAsync(ApplicationConfig.REALM_URL);
             //MyInvitation is an object that holds the token.
             //Wrapped this inside an object so I could add some custom meta data if I would want to
 
